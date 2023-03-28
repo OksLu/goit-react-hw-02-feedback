@@ -3,6 +3,8 @@ import { FeedbackOptions } from './feedback/Feedback';
 import { Notification } from './notification/Notification';
 import { Section } from './section/Section';
 import { Statistic } from './statistic/Statistic';
+import css from './App.module.css';
+import { SiCoffeescript } from 'react-icons/si';
 
 export class App extends Component {
   state = {
@@ -37,6 +39,12 @@ export class App extends Component {
     const positivePercentage = this.countPositiveFeedbackPercentage();
     return (
       <div>
+        <div className={css.header}>
+          <h2 className={css.title}>
+            <SiCoffeescript />
+            Espresso
+          </h2>
+        </div>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={options}
